@@ -1,0 +1,171 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+body,html{
+    height: 100%;
+}
+aside{
+    position: fixed;
+    height: 120px;
+    width: 100%;
+    background-color: white;
+    opacity: 0.40;
+    z-index: 0;
+}
+nav{
+    position: fixed;
+    height: 100px;
+    width: 100%;
+    text-align: center;
+    line-height:10 px;
+    background-color: transparent;
+}
+ul.menu{
+    background: transparent;
+    height: 50px;
+    margin-left: 250px;
+    margin-top: 10px;
+    font-size: 50px;
+}
+ul.menu > li{
+    float: left;
+    position: relative;
+    
+}
+ul.menu >li > a{
+    display: block;
+    font-size: 20px;
+    color: black;
+    padding: 0 15px;
+    line-height:50px;
+}
+ul.menu ul{
+    background: #21243d;
+    opacity: 0.90;
+    width: 200px;
+    position: absolute;
+    top: 30px;
+    left: 0px;
+    transition: 250ms all;
+    visibility: hidden;
+    z-index: 0;
+    border-radius: 10px;
+    margin-left: 50px;
+    padding-right:30px;
+
+}
+ul.menu ul li{
+    position: relative;
+}
+ul.menu ul li a{
+    display: block;
+    padding: 4px 0px;
+    color:white ;
+    font-size: 14px;
+    z-index: 1;
+    padding-right:50px;
+    padding-left: 30px;
+    width: 30px;
+}
+ul.menu >li ul ul {
+    top:0;
+    left: 200px;
+    visibility: hidden;
+}
+ul.menu > li:hover > ul{
+    visibility: visible;
+    top: 50px;
+}
+ul.menu ul li:hover >ul{
+    visibility: visible;
+    top: 0px;
+    left: 180px;
+    right: 10px;
+}
+ul.menu li a :hover{
+    background-color:#bd574e;
+    color: bisque;
+    text-align: center;
+    
+}
+
+nav a{
+    color: black;
+    font-family: 'Oswald', sans-serif;
+    text-decoration: none;
+    font-size: 50px;
+    margin-left:50px;
+}
+nav a:hover{
+    
+    color: white;
+    border-radius: 10px;
+    background-color: #bd574e ;
+}
+.gorsel{
+    height: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.bant{
+    height:30%;
+    background-color: #a3a3c2;
+}
+#gor1{
+    background-color: orchid;
+    background-image: url(couple.jpeg);
+}
+
+#gor2{
+    background-image: url(heels.jpeg);
+}
+#gor3{
+    background-image: url(violin.jpeg);
+}
+.Home{
+    position: absolute;
+    float: left;
+}
+.Header{
+    width: 100%;
+    height: 10%;
+    text-align: center;
+    margin-top: 350px;
+    z-index: 1;
+    font-family: 'Oswald', sans-serif;
+    text-decoration: none;
+}
+.Filter{
+    width: 100%;
+    height: 10%;
+    margin-top: 350px;
+    background-color: whitesmoke;
+    opacity: 0.35;
+    z-index: 0;
+}
+.yazı{
+    color: black;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    padding-top: 45px;
+    font-size: xx-large;
+}
+.yazı2{
+    color: black;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    padding-top: 45px;
+    font-size: xx-large;
+
+}.yazı3{
+    color: black;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    padding-top: 45px;
+    font-size: xx-large;
+}
+.menu{
+    background-color: transparent;
+}

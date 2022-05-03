@@ -1,0 +1,267 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #3a3a3a;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+.cont {
+	width: 100%;
+	min-height: 100vh;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: minmax(90px, 90px) auto;
+	grid-template-rows: 60px auto;
+	grid-template-areas: "header header"
+						 "menu contenido";
+	transition: all .3s ease;
+}
+
+.cont.active {
+	grid-template-columns: minmax(300px, 18%) auto;
+}
+
+/* ---- ---- ---- HEADER ---- ---- ---- */
+.header {
+	grid-area: header;
+	padding: 0 20px;
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+	align-items: center;
+	justify-content: space-between;
+	grid-gap: 20px;
+	grid-template-areas: "logo busqueda iconos";
+}
+
+.header .cont-logo {
+	grid-area: logo;
+	display: flex;
+	align-items: center;
+}
+
+.header .cont-logo .boton-menu {
+	border: none;
+	padding: 10px;
+	background: none;
+	cursor: pointer;
+	font-size: 18px;
+	border-radius: 100px;
+	width: 50px;
+	height: 50px;
+	margin-right: 20px;
+}
+
+.header .cont-logo .boton-menu:hover {
+	background: #000000;
+}
+
+.header .cont-logo .logo .fas {
+	background: #000;
+	padding: 7px 12px;
+	border-radius: 4px;
+	font-size: 8px;
+	color: #ffffff;
+	position: relative;
+	top: -4px;
+	margin-right: 4px;
+}
+
+.header .cont-logo .logo {
+	font-family: 'Bebas Neue', cursive;
+	font-size: 20px;
+	position: relative;
+	top: 2px;
+}
+
+.header .arama-cubugu {
+	grid-area: busqueda;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.header .arama-cubugu input {
+	min-width: 60%;
+	padding: 0 15px;
+	height: 35px;
+	line-height: 35px;
+	border: 1px solid #ccc;
+	font-size: 16px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.header .arama-cubugu button {
+	height: 35px;
+	border: 1px solid #ccc;
+	border-left: none;
+	color: #c1a57b;
+	background: #f8f8f8;
+	padding: 0 25px;
+	cursor: pointer;
+}
+
+.header .arama-cubugu button:hover {
+	background: #f5f5f5;
+}
+
+.header .baslık-butonu {
+	grid-area: iconos;
+	display: flex;
+	align-items: center;
+}
+
+.header .baslık-butonu button {
+	background: none;
+	border: none;
+	width: 40px;
+	height: 40px;
+	font-size: 18px;
+	padding: 7px 12px;
+	border-radius: 100px;
+	color: #ffffff;
+	margin-right: 20px;
+	cursor: pointer;
+}
+
+.header .baslık-butonu button:hover {
+	background: #000000;
+}
+
+.header .baslık-butonu .avatar {
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+}
+
+.header .baslık-butonu .avatar img {
+	vertical-align: top;
+	width: 100%;
+	border-radius: 100px;
+}
+
+/* ---- ---- ---- Menu---- ---- ---- */
+
+.yan-menu {
+	grid-area: menu;
+	background: #3a3a3a;
+	overflow: hidden;
+}
+
+.yan-menu a {
+	display: block;
+	padding: 15px 35px;
+	color: #000;
+	min-width: 800px;
+}
+
+.yan-menu a:hover {
+	background: #918c88;
+}
+
+.yan-menu a.active {
+	background: #3a3a3a;
+	font-weight: bold;
+}
+
+.yan-menu .fas {
+	color: #000;
+	margin-right: 32px;
+	width: 20px;
+	text-align: center;
+}
+
+.yan-menu a.active .fas {
+	color: black;
+}
+
+.yan-menu hr {
+	margin: 20px 0;
+	border: 1px solid #000;
+}
+
+/* ---- ---- ---- Ana Kısım ---- ---- ---- */
+.main {
+	grid-area: contenido;
+	background:  #262626;
+	padding: 40px;
+}
+
+.main .baslik {
+    margin-bottom: 20px;
+    color: white;
+}
+
+.main .grid-videos {
+	display: grid;
+	grid-gap: 40px 20px;
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.main .grid-videos .video {
+	width: 100%;
+	display: block;
+}
+
+.main .grid-videos .video img {
+	width: 100%;
+}
+
+/* ---- ---- ---- Media ---- ---- ---- */
+@media screen and (max-width: 1200px) {
+	.main .grid-videos {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.header .contenedor-logo .logo span {
+		display: none;
+	}
+
+	.header .barra-busqueda input {
+		min-width: 70%;
+	}
+}
+
+@media screen and (max-width: 992px) {
+	.main .grid-videos {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.contenedor {
+		grid-template-rows: auto;
+	}
+
+	.header {
+		padding: 20px;
+		grid-template-columns: auto auto;
+		justify-content: space-between;
+		grid-template-areas: "logo iconos"
+							 "busqueda busqueda";
+	}
+
+	.header .contenedor-logo .logo span {
+		display: inline;
+	}
+
+	.header .barra-busqueda input {
+		min-width: auto;
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.main .grid-videos {
+		grid-template-columns: 1fr;
+	}
+}
+                             

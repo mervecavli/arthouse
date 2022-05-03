@@ -1,0 +1,110 @@
+body{
+   background-repeat: repeat;
+   animation: change-bg 10s infinite;
+}
+@keyframes change-bg{
+    0%{
+        background-image: url(gtr.jpg);
+    }
+    20%{
+        background-image: url(bale.jpeg);
+    }
+    40%{
+        background-image: url(e5.jpeg);
+    }
+    60%{
+        background-image: url(ressam.jpeg);
+    }
+    80%{
+        background-image: url(yoga.jpeg);
+    }
+    100%{
+        background-image: url(gtr.jpg);
+    }
+}
+aside{
+    position: fixed;
+    height: 120px;
+    width: 100%;
+    background-color: white;
+    opacity: 0.40;
+    z-index: 0;
+}
+.loginkutu{
+    width: 320px;
+    height: 420px;
+    background-color:  rgba(255, 255, 255, 0.5);
+    color: #801336;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+    z-index: 0;
+    border-radius: 40px;
+    font-family: 'Lobster', cursive;
+}
+.avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    
+}
+h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}
+.loginkutu p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-family: 'Lobster', cursive;
+}
+.loginkutu input{
+    width: 100%;
+    margin-bottom: 20px;
+
+}
+.loginkutu input[type="text"], input[type="password"]
+{
+ border: none;
+ border-bottom: 1px solid black ;
+ background: transparent;
+ outline: none;
+ height: 40px;
+ color: black;
+ font-size: 16px;
+
+}
+.loginkutu input[type="submit"] {
+    border:none;
+    outline: none;
+    height: 40px;
+    background-color:black;
+    color: white;
+    font-size:  18px;
+    border-radius: 20px;
+    z-index: 1;
+    font-family: 'Lobster', cursive;
+}
+.loginkutu input[type="submit"]:hover{
+    cursor: pointer;
+    background-color: white;
+    color: black;
+}
+.loginkutu a{
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 25px;
+    color:#413c69
+    ;
+
+}
+.loginkutu a :hover{
+    color: thistle;
+}
